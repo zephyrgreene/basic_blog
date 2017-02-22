@@ -1,0 +1,11 @@
+<h1>Subjects Index Page</h1>
+
+<ul id="tags">
+  <% @tags.each do |t| %>
+    <li>
+      <%= link_to t.name, tag_path(t) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "<< Back to Main", articles_path %>
